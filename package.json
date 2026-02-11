@@ -1,14 +1,11 @@
 {
   "name": "base-wallet-dashboard",
   "version": "1.0.0",
-  "description": "Real-time Base wallet monitoring CLI — check balances, transactions, and token holdings",
-  "main": "index.js",
+  "description": "Real-time Base wallet monitoring dashboard — check balances, transactions, and token holdings",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "balance": "node index.js balance",
-    "transactions": "node index.js transactions",
-    "tokens": "node index.js tokens",
-    "watch": "node index.js watch"
+    "start": "node server.js",
+    "dev": "node index.js balance"
   },
   "keywords": [
     "base",
@@ -20,9 +17,13 @@
   ],
   "author": "itsindexbot",
   "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "ethers": "^6.7.1",
     "chalk": "^4.1.2",
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "express": "^4.18.2"
   }
 }
